@@ -1,22 +1,40 @@
 #include <curses.h>
 
+void main_logic()
+{
+	move(LINES / 2, COLS / 2);
+	// waddstr(stdscr, "Hello, world!");
+	getch();
+	waddstr(stdscr, "H");
+	getch();
+	waddstr(stdscr, "e");
+	getch();
+	waddstr(stdscr, "l");
+	getch();
+	waddstr(stdscr, "l");
+	getch();
+	waddstr(stdscr, "o");
+	getch();
+	waddstr(stdscr, ",");
+	getch();
+	waddstr(stdscr, "W");
+	getch();
+	waddstr(stdscr, "o");
+	getch();
+	waddstr(stdscr, "r");
+	getch();
+	waddstr(stdscr, "l");
+	getch();
+	waddstr(stdscr, "d");
+	getch();
+	waddstr(stdscr, "!");
+	getch();
+}
+
 int main()
 {
-	/*  初始化屏幕，使之进入curses工作模式      */
 	initscr();
-	/*  在最外围画一个方框  */
-	box(stdscr, ACS_VLINE, ACS_HLINE);
-	/*  将光标移到屏幕中间, LINES代表当前屏幕最大行数，COLS代表当前屏幕最大列数  */
-	move(LINES / 2, COLS / 2);
-	/*  在stdscr上打印"Hello, World"    */
-	waddstr(stdscr, "Hello, world!");
-	getch();
-	/*  刷新    */
-	refresh();
-	move(LINES / 2, COLS / 2);
-	waddstr(stdscr, "Hello, CSDN!");
-	getch();
-	/*  结束curses工作模式，恢复原来的屏幕  */
+	main_logic();
 	endwin();
 	return 0;
 }
